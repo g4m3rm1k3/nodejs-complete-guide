@@ -11,7 +11,12 @@ const products = [];
 router.use(bodyParser.urlencoded({ extended: true }));
 
 router.get("/add-product", (req, res, next) => {
-  res.render("add-product", { products, title: "Mikes Products" });
+  res.render("add-product", {
+    products,
+    title: "Mikes Products",
+    path: "/admin/add-product",
+    pageTitle: "Add Product",
+  });
 });
 
 router.post("/add-product", (req, res, next) => {

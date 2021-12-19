@@ -1,0 +1,18 @@
+extends layouts/main-layout.pug
+
+block styles
+  link(rel="stylesheet", href="/css/forms.css")
+  link(rel="stylesheet", href="/css/product.css")
+  link(rel="stylesheet", href="/css/404.css")
+
+block content
+  section.notFound
+    .img
+      img(src="https://assets.codepen.io/5647096/backToTheHomepage.png", alt="Back to the Homepage")
+      img(src="https://assets.codepen.io/5647096/Delorean.png", alt="El Delorean, El Doc y Marti McFly")
+    .text
+      h1 404
+      h2 PAGE NOT FOUND
+      h3 BACK TO HOME?
+      a.yes(href="/") YES
+      a(href="https://www.youtube.com/watch?v=G3AfIvJBcG0") NO
