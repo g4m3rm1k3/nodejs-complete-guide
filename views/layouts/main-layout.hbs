@@ -6,38 +6,22 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/products.css" />
     <link rel="stylesheet" href="/css/forms.css" />
-    <title>Shop</title>
+    {{#if notFound}}
+      <link rel="stylesheet" href="/css/404.css" />
+    {{/if}}
+    <title>{{title}}</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-header_nav">
         <ul class="main-header_item-list">
           <li class="main-header_item">
-            <a href="/" >Shop</a>
+            <a href="/" class="{{#if activeShop}}active{{/if}}">Shop</a>
           </li>
           <li class="main-header_item">
-            <a
-              href="/admin/add-product"
-              class=
-              >Add Product</a
-            >
+            <a href="/admin/add-product" class="{{#if activeProduct}}active{{/if}}">Add Product</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <article class="card product-item">
-        <header class="card_header">
-          <h1 class="product_title"></h1>
-        </header>
-        <div class="card_image">
-          <img src="" alt="}" />
-        </div>
-        <div class="card_content">
-          <h2 class="product_price">$</h2>
-          <h2 class="product_description"></h2>
-        </div>
-      </article>
-    </main>
-  </body>
-</html>
+    {{{body}}}
