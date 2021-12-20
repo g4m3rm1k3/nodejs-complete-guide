@@ -2,7 +2,7 @@
 <body>
   <%-include("includes/nav.ejs") %>
   <main>
-    <% if (products.length) { %>
+    <% if (products.length > 0) { %>
     <div class="grid">
       <% for (let product of products) { %>
       <article class="card product-item">
@@ -10,7 +10,7 @@
           <h1 class="product_title"><%=product.title%></h1>
         </header>
         <div class="card_image">
-          <img src="<%=product.image%>" alt="product.alt" />
+          <img src="<%=product.image%>" alt="<%=product.alt%>" />
         </div>
         <div class="card_content">
           <h2 class="product_price">$<%=product.price%></h2>

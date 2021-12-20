@@ -112,12 +112,19 @@ div.browser h2 {
   margin: 0;
   padding: 0 40px;
 }
-footer {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
+html{
+  height:100%;
 }
+body{
+  min-height:100%;
+  display:grid;
+}
+footer{
+  width:100vw;
+}
+
+
+
 footer div.social-media-links {
   background: #323b40;
   overflow: hidden;
