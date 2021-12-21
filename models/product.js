@@ -8,18 +8,14 @@ const p = path.join(
   );
 
 const getProductFromFile = (cb) =>{
-
   fs.readFile(p, (err, fileContent) => {
     if(err){
       cb([]);
     }else{
       cb(JSON.parse(fileContent));
-
     }
   })
 }
-
-
 module.exports = class Product {
   constructor(title, desc, image, price){
     this.title = title;
@@ -27,7 +23,6 @@ module.exports = class Product {
     this.image = image;
     this.price = price;
   }
-
   save(){
     getProductFromFile( products => {
       products.push(this)
@@ -36,7 +31,6 @@ module.exports = class Product {
       });
     });
   }
-
   static fetchAll(cb){
     getProductFromFile(cb);
   }
